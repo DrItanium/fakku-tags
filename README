@@ -1,7 +1,5 @@
-This is a Go package which interacts with the fakku REST api. It gives me an 
-excuse to get better with the Go programming language.
+This program prints out the current list of tags that fakku supports plus description
 
-To install this library and associated tools do the following
+To install:
 
-go install github.com/DrItanium/fakku-toolchain/...
-
+go get github.com/DrItanium/fakku-tags

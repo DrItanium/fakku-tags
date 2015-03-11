@@ -4,7 +4,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/DrItanium/fakku-toolchain"
+	"github.com/DrItanium/fakku"
 )
 
 var verboseFlag bool
