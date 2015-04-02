@@ -16,17 +16,16 @@ func init() {
 }
 func main() {
 	flag.Parse()
-	tags, err := fakku.GetTags()
+	tags, err := fakku.Tags()
 
 	if err != nil {
 		fmt.Println(err)
 		fmt.Println("Something bad happened! Perhaps Fakku is down?")
 	}
-	var i uint
-	for i = 0; i < tags.Total; i++ {
-		curr := tags.Tags[i]
+	for i := 0; i < len(tags); i++ {
+		curr := tags[i]
 		if verboseFlag {
-			fmt.Printf("%s - %s\n", curr.Name, curr.Description)
+			fmt.Printf("%s - %s - %s\n", curr.Name, curr.Description, curr.Url)
 		} else {
 			fmt.Println(curr.Name)
 		}
